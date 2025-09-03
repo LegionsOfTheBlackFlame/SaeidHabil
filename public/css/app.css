@@ -1,0 +1,327 @@
+/* Custom Properties */
+:root {
+    --space: 2.5rem;
+    --half-space: 1rem;
+    --double-space: 5rem;
+    --triple-space: 7rem;
+    --light: #dfdfdf;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 2px solid white;
+    text-transform: uppercase;
+    color: var(--light);
+}
+
+/* General Rules */
+body {
+    font-family: "Questrial", sans-serif;
+    background-color: black;
+}
+h1 {
+    font-size: 6rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 3rem;
+    /* font-optical-sizing: auto; */
+    font-weight: 100;
+    font-style: normal;
+}
+h4 {font-size: 1.5rem;}
+
+p {font-size: 1.1rem;}
+
+a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize !important;
+}
+
+/* Utility classes */
+.bb {box-sizing: border-box !important;}
+.sec {
+    max-width: 90vw;
+    margin:  var(--double-space) auto;
+}
+
+/* Layout */
+.site-nav {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: var(--double-space);
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: var(--half-space);
+    padding-top: var(--space);
+    color: var(--light);
+    /* outline: 2px solid red; */
+}
+
+.site-nav a {
+    margin: 0;
+    padding: var(--half-space);
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+/* Desktop nav */
+.nav-links {
+    /* outline: 2px solid red; */
+    display: flex;
+    height: auto;
+    justify-self: flex-end;
+    margin-right: var(--double-space);
+    padding-top: var(--space);
+    list-style: none;
+}
+
+/* Mobile nav */
+.nav-toggle {display: none;}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        top: 100%;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+.section-hero {
+    display: grid;
+    width: 100%;
+    max-width: unset;
+    height: 120vh;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    /* outline: 2px solid blue; */
+}
+
+.hero-image {
+  width: 55vw;
+    filter: grayscale(100%) contrast(95%) brightness(75%);
+  
+}
+.hero-image-wrapper {
+   width: 30vw;
+   height: 100%;    /* optional, for vertical crop */
+  overflow: hidden;  /* hides what doesn't fit */
+  position: relative;
+}
+
+.hero-content {
+    /* outline: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--half-space);
+}
+
+.hero-content>p {
+    width: 40%;
+    padding-top: var(--half-space);
+}
+
+.portraits {
+    width: 90vw;
+    height: auto;
+    display: grid;
+    position: relative;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    gap: var(--space);
+    /* outline: 2px solid salmon; */
+}
+
+.portraits>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: var(--space);
+    margin: var(--half-space) 0;
+}
+
+.portraits>div>h2 {
+    align-self: flex-end;
+    font-size: 5rem !important;
+}
+
+.image-wrapper {
+    width: max-content;
+    justify-content: space-between;
+    gap: var(--space);
+    display: flex;
+    margin-top: auto;
+}
+
+.portraits-image-1 {
+    width: 15rem;
+    height: 25em;
+    object-fit: cover;
+    background-image: url("https://i.pinimg.com/736x/49/5a/6c/495a6c3df6f7711dea9a4ab55ef43ac4.jpg");
+}
+
+.portraits-image-2 {
+    width: 15rem;
+    height: 25em;
+    object-fit: cover;
+    background-image: url("https://i.pinimg.com/736x/f5/5a/78/f55a78f260390575a16ff4cb5338c2df.jpg");
+}
+
+.gu1 {
+    position: relative;
+}
+
+.portraits-unit-2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2rem;
+    /* halfway down grid */
+    height: 2px;
+    background: var(--light);
+}
+
+.portraits>div>p {
+    width: 50%;
+}
+
+.portraits-unit-2 {
+    padding: var(--half-space);
+}
+
+
+.gallery {
+     display: grid;
+  grid-template-rows: auto auto auto; /* 3 rows, flexible */
+  gap: 1rem;
+
+}
+
+.gallery-unit {
+    display: grid;
+  grid-template-columns: 1fr auto; /* content flexes, media auto-sizes */
+  align-items: start;
+  padding: var(--half-space);
+  gap: var(--space);
+  overflow: hidden;
+
+}
+
+.gallery-image-1 {
+  
+}
+
+.gallery-image-2 {
+   
+}
+
+.gallery-image-3 {
+   
+}
+
+.media-wrapper {
+    
+    padding-bottom: var(--double-space);
+}
+/* .media-wrapper::after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+    width: 50%;
+    top: var(--space);
+    height: 2px;
+    background-color: var(--light);
+} */
+.media-wrapper > img {
+     height: auto;        /* <-- your manual set height */
+  width: auto;          /* width auto-scales */
+  max-width: 35vw;
+  min-height: 35vh;     /* cap the width */
+  object-fit: contain;
+}
+
+.media-info {
+    width: 100%;
+    
+    
+}
+.media-info> * {
+    padding: 1rem 0;
+}
+.media-info>h2 {
+    
+    text-decoration-thickness: 2px;
+}
+.media-info>p {
+    border-top: 2px solid var(--light);
+}
+.divider-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.divider-cell {
+    border-bottom: 2px solid var(--light);
+}
+.footer-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.footer-cta-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-cta-image, .footer-image {
+    max-width: 25vw;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.footer-cta-image> img {
+    width: 25vw;
+}
+
+/* .footer-cta-image {
+    width: 15rem;
+    height: 15rem;
+    background-image: url("https://i.pinimg.com/736x/e0/23/7f/e0237f5dceea94f6a64d02b2851d1dd7.jpg");
+}
+
+.footer-image {
+    width: 20rem;
+    height: 45rem;
+    background-image: url("https://i.pinimg.com/736x/85/9c/97/859c977f7f71ba798402656fe4be92f8.jpg");
+} */
+
+/* Fonts */
+.alfa-slab-one-regular {
+  font-family: "Alfa Slab One", serif !important;
+
+}
+.raleway {
+    font-family: "Raleway", sans-serif;
+}
