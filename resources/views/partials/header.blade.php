@@ -1,4 +1,4 @@
-<nav class="site-nav bb"  aria-label="Main navigation">
+<nav class="site-nav bb" aria-label="Main navigation">
     <ul class="nav-links">
         <li><a href="{{ url('/') }}">Contact</a></li>
         <li><a href="{{ url('/about') }}">Portfolio</a></li>
@@ -8,14 +8,15 @@
     {{-- Mobile menu toggle --}}
     <button class="nav-toggle">☰</button>
 </nav>
+
 <script>
 document.addEventListener("scroll", () => {
-  const nav = document.querySelector(".site-nav");
-  const triggerPoint = window.innerHeight * 0.5; // 50vh
-  if (window.scrollY > triggerPoint) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
+    const nav = document.querySelector(".site-nav");
+    const triggerPoint = window.innerHeight * 0.5; // 50vh
+    if (window.scrollY > triggerPoint) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
 });
 </script>
