@@ -4,7 +4,7 @@
     {{-- Hero Section --}}
     <div class="section-hero bb">
         <div class="hero-image-wrapper">
-            <img class="hero-image" src="{{ asset('hero-img.jpg') }}" />
+            <img class="hero-image" src="{{ asset('hero-img.jpg') }}"  alt="Portrait of Saeid Habil"/>
         </div>
         <div class="hero-content">
             <h4>Hi, I am</h4>
@@ -26,24 +26,36 @@
                 </div>
             </div>
             <div class="portraits-unit-2 gu1">
-                <p>{{ $unit['text1'] }}</p>
+                <h4>{{ $unit['text1'] }}</h4>
                 <p>{{ $unit['text2'] }}</p>
             </div>
         </div>
     @endforeach
 
-    {{-- Gallery Section --}}
-    <div class="gallery sec">
-        @foreach ($gallery as $unit)
-            <div class="gallery-unit">
-                <div class="media-info">
-                    <h2>{{ $unit['title'] }}</h2>
-                    <p class="gu2">{{ $unit['text'] }}</p>
-                </div>
-                <div class="media-wrapper gu1 {{ $unit['mediaMod'] }}">
-                    <img src="{{ asset($unit['media']) }}" />
-                </div>
+<div class="gallery sec">
+    @foreach ($gallery as $index => $unit)
+        <div class=" {{ $unit['displayMode'] === 'end' ? 'gallery-unit-end' : 'gallery-unit' }}">
+            <div class="media-info">
+                <h2>{{ $unit['title'] }}</h2>
+
+                <p class="gu2 {{ $unit['displayMode'] === 'top' ? 'top-outlined' : '' }}">
+                    {{ $unit['text'] }}
+                </p>
             </div>
-        @endforeach
-    </div>
+
+            <div class="media-wrapper gu1 {{ $unit['mediaMod'] }}">
+                <img src="{{ asset($unit['media']) }}" alt="{{ $unit['title'] }}"/>
+            </div>
+        </div>
+
+        @if ($index < count($gallery) - 1)
+            <div class="gallery-divider">
+                <div></div>
+                <div></div>
+                <div class="divider-line"></div>
+            </div>
+        @endif
+    @endforeach
+</div>
+
 @endsection
