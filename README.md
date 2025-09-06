@@ -23,12 +23,6 @@
 - Pages: `resources/views/{home,about,etc}.blade.php` → page content
 - JS: `resources/js/app.js` → main entry, import modular JS
 
-## Development Notes
-- Sessions stored in files (no SQL)
-- Grid-based layout, responsive design
-- Navbar reacts to scroll via JS
-- Repeating sections use Blade loops (`@foreach`) for maintainability
-
 ## Glossary
 - Sites : components directly part of layout
     | class : ".site-xrole"
