@@ -74,6 +74,11 @@ a {
 
 .rel { position: relative; }
 
+.intro {
+    display: flex;
+    top: var(--half-space);
+    font-size: 1.5rem;
+}
 /* ================================
    Navigation
 ================================ */
@@ -174,60 +179,7 @@ a {
 /* ================================
    Portraits Section
 ================================ */
-/* .portraits {
-    width: 90vw;
-    height: auto;
-    display: grid;
-    position: relative;
-    grid-auto-flow: column;
-    grid-template-rows: auto auto;
-    gap: var(--space);
-}
 
-.portraits > div {
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: auto 50vw;
-    justify-content: space-between;
-    gap: var(--space);
-    margin: var(--half-space) 0;
-}
-
-.portraits > div > h2 {
-    align-self: flex-end;
-    font-size: 6rem;
-    font-weight: 100;
-}
-
-.image-wrapper {
-    display: flex;
-    max-width: 50vw;
-    overflow: hidden;
-    gap: var(--space);
-    margin-top: auto;
-    padding: 0 var(--space);
-}
-
-.image-wrapper > div {
-    display: flex;
-    max-width: 50%;
-    justify-items: end;
-}
-
-.image-wrapper > div > img {
-    max-width: 100%;
-    object-fit: cover;
-}
-
-.portraits-unit-2 {
-    justify-content: space-between;
-    gap: var(--double-space);
-    border-top: var(--line-height) solid var(--light-II);
-    padding: var(--space);
-}
-.portraits-unit-2 > p { margin: 0 1rem; }
-.portraits-unit-2 > h4 { letter-spacing: 5px; font-weight: 100; } */
 .portraits {
    
     max-height: 90vh;
@@ -288,53 +240,10 @@ a {
     width: 50%;
     margin: 0 1rem;
 }
+
 /* ================================
    Gallery Section
 ================================ */
-/* .gallery {
-    display: grid;
-    grid-template-rows: auto;
-    gap: 1rem;
-}
-
-.gallery-unit {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr auto;
-    gap: var(--space);
-    padding: var(--half-space);
-    overflow: hidden;
-}
-
-.gallery-unit.position-end {
-    align-items: end;
-    align-content: end;
-}
-
-.media-wrapper > img {
-    height: auto;
-    width: auto;
-    max-width: 35vw;
-    min-height: 35vh;
-    object-fit: contain;
-}
-
-.media-info {
-    width: 100%;
-}
-.media-info > * { padding: 1rem 0; }
-.media-info > h2 { text-decoration-thickness: var(--line-height); }
-
-.top-outlined { border-top: var(--line-height) solid var(--light); }
-
-.gallery-divider {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    height: var(--double-space);
-    padding: var(--half-space);
-} */
-
 .gallery {
   display: flex;
   flex-direction: column;
@@ -365,20 +274,6 @@ a {
 
 .gallery-divider { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%; height: var(--double-space); padding: var(--half-space); } .divider-line { border-bottom: var(--line-height) solid var(--light-II); }
 
-/* Footer
-.footer-wrapper { display: grid; grid-template-columns: 1fr 1fr 1fr; }
-.footer-cta-wrapper { display: flex; flex-direction: column; }
-/* .footer-cta > h2 { font-size: 5rem; } */
-/* .footer-cta-image, .footer-image { max-width: 25vw; max-height: 75vh; overflow: hidden; object-fit: cover; }
-.footer-cta-image > img { width: 25vw; }
-.footer-contact-wrapper {
-    display: flex;
-    border-top: var(--line-height) solid var(--light);
-    padding: var(--double-space) var(--half-space);
-}
-.footer-contact-wrapper > * { min-width: var(--space); margin-right: var(--space); }
-.bi-envelope > svg { width: 100%; } */ 
-
 /* ================================
    Footer
 ================================ */
@@ -396,8 +291,9 @@ a {
 /* Fonts */
 .alfa-slab-one-regular { font-family: "Alfa Slab One", serif !important; }
 
-/* Responsive Styles */
-
+/* ================================
+   Responsive Styles
+================================ */
 @media (max-width: 1200px) {
     :root {--fs-2xl : clamp(4rem, 10vw, 10rem);
     --fs-base : clamp(1rem, 3vw, 2rem);
@@ -457,30 +353,4 @@ h2 { font-size: var(--fs-lg);}
     grid-template-columns: auto;
 }
 }
-/* @media (max-width: 480px) {
-  :root {
-    --fs-lg: clamp(1rem, 5vw, 1.5rem);
-    --fs-2xl: clamp(1.75rem, 8vw, 3rem);
-  }
 
-  .portraits { gap: var(--half-space); }
-  .portraits-unit-2 {
-    border-top: none;
-    border-left: var(--line-height) solid var(--light-II);
-    padding: var(--space) var(--half-space);
-  }
-  .media-wrapper img {
-    max-width: 100%;
-    max-height: 120vh;
-  }
-  .footer-wrapper { grid-template-columns: 1fr 1fr; }
-  .footer-image { display: none; }
-} */
-
-/* !!!! */
-
-.intro {
-    display: flex;
-    top: var(--half-space);
-    font-size: 1.5rem;
-}
