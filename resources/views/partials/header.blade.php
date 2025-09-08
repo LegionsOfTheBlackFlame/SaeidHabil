@@ -1,8 +1,8 @@
 <nav class="site-nav bb" aria-label="Main navigation">
     <ul class="nav-links">
-        <li><a href="{{ url('/') }}">Contact</a></li>
-        <li><a href="{{ url('/about') }}">Portfolio</a></li>
-        <li><a href="{{ url('/contact') }}">About</a></li>
+        <li><a href="{{ url('/contact') }}">Contact</a></li>
+        <li><a href="{{ url('/portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ url('/about') }}">About</a></li>
     </ul>
 
     {{-- Mobile menu toggle --}}

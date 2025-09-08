@@ -285,7 +285,7 @@ a {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .site-nav { width: 100vw;padding: 2rem;}
+    .site-nav { width: 100vw;padding: var(--half-space) var(--space);}
     .section-hero { grid-template-columns: 1fr; grid-auto-flow: row; height: auto; }
     .hero-image-wrapper { width: 100%; height: 60vh; }
     .hero-image { width: 100%; height: 100%; object-fit: cover; object-position: left;}
@@ -332,6 +332,7 @@ a {
     min-width: var(--half-space);
     margin-right: var(--half-spacespace) 1rem;
 }
+h2 { font-size: var(--fs-lg);}
 .portraits > div {
     grid-template-columns: auto;
 }
