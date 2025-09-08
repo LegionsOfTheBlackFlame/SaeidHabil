@@ -25,7 +25,7 @@
             <h2>{{ $unit['section'] }}</h2>
             <div class="image-wrapper">
                 @foreach ($unit['media'] as $index => $mediaFile)
-                    <div class="img portraits-image-{{ $index + 1 }}">
+                    <div role="presentation" class="img portraits-image-{{ $index + 1 }}">
                         <img src="{{ asset($mediaFile) }}" alt="">
                     </div>
                 @endforeach
@@ -49,7 +49,7 @@
                 </p>
             </div>
             <div class="media-wrapper rel {{ $unit['mediaMod'] }}">
-                <img src="{{ asset($unit['media']) }}" alt="{{ $unit['title'] }}" />
+                <img role="presentation" src="{{ asset($unit['media']) }}" alt="{{ $unit['title'] }}" />
             </div>
         </div>
 
