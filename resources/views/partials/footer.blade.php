@@ -1,4 +1,4 @@
-<footer>
+<footer role="contentinfo">
     <div class="footer-wrapper sec">
         <div class="footer-cta-wrapper">
             <div class="footer-cta-image">

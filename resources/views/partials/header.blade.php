@@ -1,4 +1,4 @@
-<nav class="site-nav bb" aria-label="Main navigation">
+<nav class="site-nav bb" aria-label="Main navigation" role="banner">
     <ul class="nav-links">
         <li><a href="{{ url('/contact') }}">Contact</a></li>
         <li><a href="{{ url('/portfolio') }}">Portfolio</a></li>

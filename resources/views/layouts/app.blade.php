@@ -17,7 +17,7 @@
     {{-- Navbar --}}
     @include('partials.header')
 
-    <main>
+    <main role="main">
         @yield('content')
     </main>
 

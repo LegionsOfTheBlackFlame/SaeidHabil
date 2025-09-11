@@ -23,6 +23,12 @@
 - Pages: `resources/views/{home,about,etc}.blade.php` → page content
 - JS: `resources/js/app.js` → main entry, import modular JS
 
+## --> Latest commit addresses:
+- Refactored data sourcing for a config driven setup.
+- Broke down structure into components
+-
+
+
 ## Glossary
 - Sites : components directly part of layout
     | class : ".site-xrole"
