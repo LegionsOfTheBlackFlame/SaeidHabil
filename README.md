@@ -26,7 +26,7 @@
 ## --> Latest commit addresses:
 - Refactored data sourcing for a config driven setup.
 - Broke down structure into components
--
+- Improved dom structure and responsiveness
 
 
 ## Glossary

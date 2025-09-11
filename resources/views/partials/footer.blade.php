@@ -1,5 +1,5 @@
 <footer role="contentinfo">
-    <div class="footer-wrapper sec">
+    <div class="footer-wrapper container">
         <div class="footer-cta-wrapper">
             <div class="footer-cta-image">
                 <img src="{{ asset('img7.jpg') }}" alt="Call to action image"/>
@@ -20,7 +20,7 @@
                 </svg>
             </div>
             <div>
-                <h4 class="cap" >Email:</h4>
+                <h3 class="cap" >Email:</h3>
                 <h6 class="cap" href="mailto:saeid.habil@gmail.com">saeid.habil@gmail.com</h6>
             </div>
         </div>

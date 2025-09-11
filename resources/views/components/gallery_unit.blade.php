@@ -5,7 +5,7 @@
             {{ $unit['caption'] }}
         </p>
     </div>
-    <div class="gallery-image-wrapper rel {{ $unit['cssClass'] }}">
+    <div class="gallery-image-block rel {{ $unit['cssClass'] }}">
         <img 
             role="presentation" 
             src="{{ asset($unit['image']) }}" 

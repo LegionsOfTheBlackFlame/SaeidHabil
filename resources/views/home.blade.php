@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Hero Section --}}
-<section class="section-hero">
+<section class="full-width">
     <div class="hero-image-block">
         <img class="hero-image" src="{{ asset('hero-img.jpg') }}" alt="Portrait of Saeid Habil" />
     </div>

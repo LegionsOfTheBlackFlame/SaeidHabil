@@ -1,5 +1,5 @@
 
-<section class="portraits sec">
+<section class="portraits container">
     <div class="portraits-unit-1">
         <h2>{{ $unit['section'] }}</h2>
         <div class="portrait-image-block">
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="portraits-unit-2 rel">
-        <h4>{{ $unit['subtitle'] }}</h4>
+        <h3>{{ $unit['subtitle'] }}</h3>
         <p>{{ $unit['description'] }}</p>
     </div>
 </section>
