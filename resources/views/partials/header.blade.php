@@ -6,7 +6,7 @@
     </ul>
 
     {{-- Mobile menu toggle --}}
-    <button class="nav-toggle">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
 </nav>
 
 <script>
