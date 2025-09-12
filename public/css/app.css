@@ -29,7 +29,7 @@
 ================================ */
 * {
   /* outline: 2px solid #ff0000aa ; */
-  margin: auto 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--light);
@@ -38,6 +38,7 @@
 body {
   font-family: "Questrial", sans-serif;
   background-color: black;
+  width: 100%;
 }
 
 main {
@@ -74,18 +75,19 @@ a {
 } */
 
 .container {
-   max-width: 90vw;
-  width: 100%;
-  min-width: 320px; 
-  margin: var(--double-space) auto;
+  
+  width: clamp(320px, 100%, 1200px);
+ ;
+  margin: var(--fs-2xl) auto;
   padding: 0 1rem;
 }
 
 .full-width {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  max-height: 120vh;
-  width: 100%;
+  height: clamp(50vh, 100vh, 120vh);
+  
+  width: clmap(400px, 100%, 1200px);
 }
 .rel { position: relative; }
 
@@ -227,7 +229,7 @@ a {
 .img {
     width: 100%;
     height: auto;
-    max-height: 50vh;
+    max-height: 60vh;
    overflow: hidden;
 }
 
@@ -240,9 +242,9 @@ a {
     width: 90%;
     display: flex;
     justify-content: space-between;
-   margin: auto;
-   padding: var(--space);
-  border-top: var(--line-height) solid var(--light-II);
+    margin: auto;
+    padding: var(--half-space) 0;
+    border-top: var(--line-height) solid var(--light-II);
   
 }
 .portraits-unit-2 h3 {
@@ -253,7 +255,7 @@ a {
 }
 .portraits-unit-2 > p {
     width: 50%;
-    margin: 0 1rem;
+   
 }
 
 /* ================================
@@ -282,7 +284,7 @@ a {
   min-height: 35vh;
   object-fit: contain;
 }
-
+.media-info { margin: 0;}
 .media-info h2 { text-decoration-thickness: var(--line-height); }
 .media-info p  { padding-top: var(--half-space); }
 .top-outlined { border-top: var(--line-height) solid var(--light); }
@@ -292,16 +294,20 @@ a {
 /* ================================
    Footer
 ================================ */
-.footer-wrapper { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.footer-wrapper { display: grid; align-items: self-start; grid-template-columns: 1fr 1fr 1fr; justify-content: center; gap: var(--fs-base);}
 .footer-cta-wrapper { display: flex; flex-direction: column; }
 .footer-cta-image > img, .footer-image > img{ max-width: 25vw; max-height: 75vh; }
+.footer-cta { width: 90%;}
 .footer-contact-wrapper {
   display: flex;
   border-top: var(--line-height) solid var(--light);
   padding: var(--double-space) var(--half-space);
+  margin: 0;
 }
-.footer-contact-wrapper > * { width: var(--fs-lg);; margin-right: var(--space); }
-.bi-envelope > svg { width: 100%; }
+.footer-contact-wrapper > * { width: var(--fs-xl);margin: auto var(--fs-sm);}
+.content-info-block {padding: var(--half-space) 0;
+width: fit-content !important;}
+.bi-envelope > svg { width: var(--fs-lg); }
 
 /* Fonts */
 .alfa-slab-one-regular { font-family: "Alfa Slab One", serif !important; }
@@ -322,13 +328,13 @@ a {
     .hero-content { padding: 2rem; }
     /* .hero-content h1 { font-size: clamp(2rem, 6vw, 4rem); } */
     .hero-content p { width: 100%; }
+    .portraits {max-height: unset;}
     .portraits-unit-1, .portraits-unit-2  {flex-direction: column;}
     .portraits-unit-1 h2 { margin: auto;}
-    .portraits-unit-2 h3 { margin: var(--space) auto;
-    }
+    .portraits-unit-2 h3 { margin: var(--space) auto;}
     .portraits-unit-2 > p { width: 75%; text-align: center; margin: auto;}
     .portrait-image-block { max-width: 100%; flex-direction: row; margin: auto; }
- .portraits-image-2, .portraits-image-1 { max-height: 40vh;}
+ .portraits-image-2, .portraits-image-1 { max-height: 60vh;}
 
     .gallery-unit { grid-auto-flow: row; grid-template-columns: 1fr; gap: var(--half-space); text-align: center; }
     
@@ -337,7 +343,7 @@ a {
     .divider-line { width: 60%; margin: 0 auto; }
      .footer-wrapper { grid-template-columns: 1fr 1fr; }
   .footer-image { display: none; }
-  .footer-contact-wrapper> * { width: var(--double-space);}
+  .footer-contact-wrapper> * { width: var(--space);}
  
 } 
 
@@ -352,10 +358,10 @@ a {
 
     .portrait-image-block { gap: var(--half-space); max-height: 30vh; }
     .portrait-image-block  > div { max-width: 100%; }
-    .portraits { justify-content: space-between; gap: 10rem;}
+    .portraits { justify-content: space-between; gap: var(--space);}
     .portraits-unit-1 { grid-auto-flow: column; grid-template-columns: 1fr; grid-template-rows: auto auto; justify-content: center;}
     .portraits-unit-2 { padding: var(--space) var(--half-space); border-top: none; border-left: var(--line-height) solid var(--light-II); grid-template-rows: auto auto; }
-
+.portraits-unit-2 h3 {  margin: var(--half-space) var(--space);}
     .gallery-unit { padding: 1rem 0; }
      .gallery-unit h2 {
         font-size: clamp(1rem, 5vw, 1.5rem);
