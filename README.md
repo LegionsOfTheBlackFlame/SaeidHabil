@@ -25,8 +25,9 @@
 
 ## Latest Commit Addresses:
 - Refactored data sourcing for a config driven setup.
-- Broke down structure into components
+- Broke down view structure into components
 - Improved dom structure and responsiveness
+- Added mobile nav-menu
 
 
 ## Glossary
