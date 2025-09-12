@@ -24,7 +24,7 @@
    
 
 {{-- Gallery Section --}}
-<section class="gallery sec">
+<section class="gallery container">
     @foreach ($gallery as $index => $unit)
         @include('components.gallery_unit', ['unit' => $unit])
 
