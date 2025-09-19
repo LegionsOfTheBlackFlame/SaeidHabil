@@ -23,9 +23,9 @@
 - Pages: `resources/views/{home,about,etc}.blade.php` → page content
 - JS: `resources/js/app.js` → main entry, import modular JS
 
-## Latest Update Addresses:
+## Latest Updates Addresses:
 - Responsive style issues
-
+- Code Readability
 
 ## Glossary
 - Sites : components directly part of layout
