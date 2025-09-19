@@ -23,11 +23,8 @@
 - Pages: `resources/views/{home,about,etc}.blade.php` → page content
 - JS: `resources/js/app.js` → main entry, import modular JS
 
-## Latest Commit Addresses:
-- Refactored data sourcing for a config driven setup.
-- Broke down view structure into components
-- Improved dom structure and responsiveness
-- Added mobile nav-menu
+## Latest Update Addresses:
+- Responsive style issues
 
 
 ## Glossary
